@@ -1,0 +1,138 @@
+/*Main Body CSS*/
+body {
+ background-color: #fff;
+}
+
+h1 {
+	padding-bottom: 18px;
+}
+
+header {
+  /* Eliminates the padding on header */
+  padding-top: .5em;
+  text-align: center; 
+  min-hegiht: 150px;
+  max-height: 225px;
+  background-color: #d02525;
+  font-size: 2em;
+  margin-bottom: 2em;
+  
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  font-family: 'Original Surfer', cursive;	
+  color: #fff;
+  -webkit-box-shadow: -3px 4px 27px 1px rgba(0,0,0,0.56);
+-moz-box-shadow: -3px 4px 27px 1px rgba(0,0,0,0.56);
+box-shadow: -3px 4px 27px 1px rgba(0,0,0,0.56); background-image: url('/src/img/Free-Nerd-Geek-with-Two-Gun-Finger-Gesture-People-High-Resolution-Clip-Art-1.png');
+  background-size: 100px;
+}
+
+.movie-title {
+	padding-top: 1%;
+}
+
+.movie-info {
+	padding-bottom: 5%;
+}
+
+#movie-pic {
+	height: 150px;
+}
+
+#detail-movie-pic {
+	height: 200px;
+}
+
+.panel-heading {
+	height: 30px;
+}
+
+.panel {
+-webkit-box-shadow: 9px 4px 10px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 8px 10px -4px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.75);
+border: solid 1px rgba(0,0,0,0.25);
+}
+
+.panel-heading:hover {
+ background-color: #dfdfdf  !important;
+}
+
+.text-shadow {
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#movie-link {
+	padding-bottom: 10px;
+	color: #167ac6;
+}
+
+#giga-star, #star-box, #star-box-giga-star {
+   background-position: -180px -71px;
+   width: 66px;
+   height: 66px;
+   line-height: 66px;
+   display: inline-block;
+   text-align: center;
+   vertical-align: middle;
+   font-size: 15px;
+   font-weight: bold;
+   color: black;
+   font-family: tahoma;
+   float: left;
+   padding-right: 5px;
+}
+
+.titlePageSprite {
+	vertical-align: top;
+	padding-top: 8px;
+
+}
+
+.title {
+
+}
+
+/* ================================= 
+ Media Queries
+==================================== */
+
+@media (min-width: 769px) { /* When screen is 769px or wider, these styles are applied */
+
+
+ .container {
+   width: 100%;        /* Giving containers a width prevents stretching too wide on larger screens */
+   max-width: 1000px;
+   margin: 0 auto;   /* setting left & right margins to auto centers the container in the browser */
+ }
+
+.titlePageSprite {
+	vertical-align: top;
+/*	padding-top: 4%; */
+}
+
+.header {
+	max-height: 225px;
+}
+
+ /* ---- Float clearfix ---- */
+
+ .clearfix::after {
+   content: " ";
+   display: table;
+   clear: both;
+ }
+ 
+}
+
+
+/* In this break point, all 3 columns will be layed out side-by-side on the same line  */
+
+@media (min-width: 1025px) {   /* When screen is 1025px or wider, these styles are applied */
+ 
+ .container {
+   width: 100%;
+   max-width: 1150px; /* layout screen doesn't get too wide, when screen is 1025px or wider */
+ }
+  
+}

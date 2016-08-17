@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>The Movie Nerd Hub</title>
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+	<!-- endbower -->
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="/src/app/content/style.css">
+	<!-- endinject -->
+	<link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
+
+</head>
+
+<!-- ng-controller="movieCtrl as vm" -->
+<body>
+	
+	<div>
+		<header id="main-header" style="-webkit-box-shadow: -3px 4px 27px 1px rgba(0,0,0,0.56);
+	-moz-box-shadow: -3px 4px 27px 1px rgba(0,0,0,0.56);
+	box-shadow: -3px 4px 27px 1px rgba(0,0,0,0.56); background-image: url('/src/img/Free-Nerd-Geek-with-Two-Gun-Finger-Gesture-People-High-Resolution-Clip-Art-1.png');
+	  background-size: 100px;">
+		
+			<h1 class="text-shadow">The Movie Nerd Hub</h1>
+		</header>
+	</div>	
+	<!-- Main container div -->
+	<div class="container">
+		<div ui-view></div>
+	</div> <!-- Main container div -->
+
+
+	<!-- bower:js -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/normalize-strings/normalize.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<!-- endbower -->
+
+	<!-- inject:js -->
+	<script src="/src/app/app.js"></script>
+	<script src="/src/app/movie/movie.detail.controller.js"></script>
+	<script src="/src/app/movie/movie.search.controller.js"></script>
+	<script src="/src/app/movie/movie.service.js"></script>
+	<!-- endinject -->
+</body>
+</html>

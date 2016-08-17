@@ -1,0 +1,44 @@
+<!-- Form - search div -->
+<form ng-submit="search.getMovie()" ng-init="parameter === 's' ">
+	<div class='input-group' style="-webkit-box-shadow: 9px 10px 14px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 8px 14px -4px rgba(0,0,0,0.75);
+box-shadow: 5px 8px -11px -4px rgba(0,0,0,0.75);">
+		<input type="text" class="form-control form-control:focus" placeholder="Search for your favorite movie" ng-model="search.title" style=""></input>
+		<span class="input-group-addon">
+			<span class="glyphicon glyphicon-search form-control:focus"> </span>
+		</span>
+	</div>
+</form> <!-- Form - search div -->
+<br>
+
+<!-- <div class="row" ng-show="" ng-hide=""> -->
+<div class="row">
+	<!-- Movie panel div - ng-repeat column -->
+	<div class="col-sm-4" ng-repeat="movie in search.movies">
+		<div class="panel panel-default">
+			<div class="panel-heading text-center" style="height: 55px; background-color: #ebebeb; color: #333333;" id="panel_head">
+				{{movie.Title}}
+			</div> <!-- Panel heading div -->
+			
+			<div class="panel-body text-center">
+				<!-- Movie image -->
+				<img id="movie-pic" ng-src="{{movie.Poster}}">
+
+			</div> <!-- Panel bidy div -->
+			<div class="text-center" id="movie-link">
+				<a ui-sref="detail({ movieId : movie.imdbID })">Go to Movie Details</a>
+				<!-- <a href=""  ng-init="parameter === 'plot' ">Link</a> -->
+				<!-- <a ui-sref="detail">Click for IBDM Details</a> -->
+			</div>
+		</div> 
+	</div> 
+	<!-- 	Movie panel div - ng-repeat column -->
+	<!-- <pre>{{ search.movies | json }}</pre> -->
+
+</div> 
+
+<!-- ng-hide ng-show div -->
+
+<!-- <a ui-sref="detail">Go to Detail</a> -->
+<div ui-view></div>
+

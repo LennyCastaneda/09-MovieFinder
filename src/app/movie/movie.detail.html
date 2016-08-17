@@ -1,0 +1,75 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading:hover text-center" style="height: 155px; background-color: #ebebeb; color: #333333; 	padding-top: 1px;
+	border-radius: 4px;">
+					<h1 class="movie-title">{{detail.data.Title}} ({{detail.data.Year}})</h1>
+					<p class="movie-info">{{detail.data.Rated}} | {{detail.data.Runtime}} | {{detail.data.Genre}} | {{detail.data.Released}} ({{detail.data.Country}})</p>
+			</div> <!-- Panel heading div -->
+			<div>
+				<table>
+					<tbody>
+					<tr>
+						<td rowspan="2" id="poster-img">
+							<div class="panel-body text-left">
+								<!-- Movie image -->
+								<img id="detail-movie-pic" ng-src="{{detail.data.Poster}}">
+							</div> <!-- Panel bidy div -->
+						</td>
+							<td>
+								<div class="col-sm-12 text-center" id="star-box giga-star">
+									<div class="titlePageSprite">
+										<strong>Meta Score</strong> {{detail.data.Metascore}}
+
+										<strong>IMDB Score</strong> 
+										{{detail.data.imdbRating}}
+										
+										<strong>IMDB Votes</strong> {{detail.data.imdbVotes}}
+
+									</div>								
+								</div>
+								<br>
+								<br>
+								<div id="description">
+									<strong>Plot: </strong>
+									{{detail.data.Plot}}</p>
+								</div>
+								<div id="director">
+									<strong>Director: </strong>
+									<p>{{detail.data.Director}}</p>
+								</div>
+								<div id="writer">
+									<strong>Writers: </strong>
+									<p>{{detail.data.Writer}}</p>
+								</div>
+								<div id="actors">
+									<strong>Actors: </strong>
+									<p>{{detail.data.Actors}}</p>
+								</div>
+								<div id="awards">
+									<strong>Awards: </strong>
+									<p>{{detail.data.Awards}}</p>
+								</div>								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+			<div class="row text-center" id="movie-link">
+				<div class="col-sm-offset-9">
+				<a ui-sref="search" class="btn btn-primary">Go to Search</a>
+				<!-- <a href=""  ng-init="parameter === 'plot' ">Link</a> -->
+				<!-- <a ui-sref="detail">Click for IBDM Details</a> -->
+				</div>
+			</div>
+		</div> 
+	</div> 
+</div> 
+
+<!-- 
+<pre>{{ detail.data  | json}}</pre>
+<pre>{{ detail.data.Title }}</pre> -->
+
+<div ui-view></div>

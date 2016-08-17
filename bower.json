@@ -1,0 +1,30 @@
+{
+  "name": "09-MovieFinder",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "normalize-strings": "normalize#^1.1.0",
+    "normalize-css": "^4.2.0",
+    "angular-ui-router": "^0.3.1"
+  }
+}
