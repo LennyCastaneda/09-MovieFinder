@@ -1,7 +1,8 @@
 <div class="row">
 	<div class="col-sm-12">
 		<div class="panel panel-default">
-			<div class="panel-heading:hover text-center" style="height: 155px; background-color: #ebebeb; color: #333333; 	padding-top: 1px;
+			<div class="panel-heading:hover text-center" 
+				style="height: 155px; background-color: #ebebeb; color: #333333; padding-top: 1px;
 	border-radius: 4px;">
 					<h1 class="movie-title">{{detail.data.Title}} ({{detail.data.Year}})</h1>
 					<p class="movie-info">{{detail.data.Rated}} | {{detail.data.Runtime}} | {{detail.data.Genre}} | {{detail.data.Released}} ({{detail.data.Country}})</p>
@@ -11,7 +12,7 @@
 					<tbody>
 					<tr>
 						<td rowspan="2" id="poster-img">
-							<div class="panel-body text-left">
+							<div class="panel-body text-left animated bounceIn">
 								<!-- Movie image -->
 								<img id="detail-movie-pic" ng-src="{{detail.data.Poster}}">
 							</div> <!-- Panel bidy div -->

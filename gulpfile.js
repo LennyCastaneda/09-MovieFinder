@@ -18,7 +18,7 @@ gulp.task('watch', function() {
 
 var paths = ['./bower_components/','./src/app/**/*.js','./src/app/**/*.css'];
 
-gulp.task('injectables', function() {
+gulp.task('inject', function() {
     var sources = gulp.src(paths, {read: false});
     return gulp.src('index.html')
         .pipe(wiredep())
@@ -28,24 +28,24 @@ gulp.task('injectables', function() {
 
 gulp.task('js', function() {
     gulp.src(jsSources)
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task('html', function() {
     gulp.src(htmlSources)
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task('css', function() {
     gulp.src(cssSources)
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task('connect', function() {
     connect.server({
         root: '.',
         livereload: true
-    })
+    });
 });
 
 gulp.task('app', function(){
@@ -58,4 +58,4 @@ gulp.task('app', function(){
 });
 
 
-gulp.task('serve', ['connect', 'watch', 'injectables', 'app']);
+gulp.task('serve', ['connect', 'watch', 'inject', 'app']);
